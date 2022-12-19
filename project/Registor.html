@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Registor.css">
+    <script src="Registor.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <div id="logo">
+                <h1>ZARA</h1>
+            </div>
+            <div id="searchbar">
+                <input type="text" id="search" placeholder="Search">
+                <span class="underline"></span>
+            </div>
+            <div id="info">
+                <p class="help">HELP</p>
+                <img class="cart" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Rzn0JKCjXMqZ7OwyeTMD8ApHEl0giqINHA&usqp=CAU" alt="">
+            </div>
+        </div>
+        <form id="form">
+            <div class="form first">
+            <div class="details_personal">
+                <span class="title"><h1>Personal Details</h1></span>
+                <div class="box">
+                    <input type="radio" id="person" name="fav_language" value="HTML">
+                    <label>PERSONAL</label>
+                
+                    <input type="radio" id="company" name="fav_language" value="HTML">
+                    <label>COMPANY</label>
+                </div>
+                <div class="fields">
+                    <div class="inut_field">
+                        <input type="text" id="email" placeholder="EMAIL" required>
+                    </div>
+                    <br>
+                    <div class="inut_field">
+                        <input type="text" id="password" placeholder="PASSWORD" required>
+                    </div>
+                    <div class="inut_field">
+                        <input type="text" id="repeat_password" placeholder="REPEAT PASSWORD" required>
+                    </div>
+                    <div class="inut_field">
+                        <input type="text" id="name" placeholder="NAME" required>
+                    </div>
+                    <div class="inut_field">
+                        <input type="text" id="pincode" placeholder="PINCODE" required>
+                    </div>
+                    <div class="inut_field">
+                        <input type="text" id="address" placeholder="ADDRESS" required>
+                    </div>
+                    <div class="inut_field">
+                        <input type="text" id="optionl" placeholder="OPTIONAL" required>
+                    </div>
+                    <div class="inut_field">
+                        <input type="text" id="local" placeholder="LOCALITY" required>
+                    </div>
+                    <div class="inut_field">
+                        <input type="text" id="city" placeholder="CITY" required>
+                    </div>
+                    <div class="inut_field">
+                        <label>STATE</label>
+                        <input type="text" id="select" placeholder="--" required>
+                    </div>
+                    <div class="inut_field">
+                        <label>REGION</label>
+                        <label>India</label>
+                    </div>
+                    <div class="inut_field">
+                        <label>PREFIX</label>
+                        <label>+91</label>
+                        <input type="text" id="phone" placeholder="TELEPHONE" required>
+                    </div>
+                    </div>
+                    <div class="checkbox">
+                        <div class="input_field">
+                            <input type="checkbox" placeholder="" required>
+                            <P>I WISH TO RECEIVE ZARA NEWS ON MY E-MAIL</P>
+                        </div>
+                        <div class="input_field">
+                            <input type="checkbox" placeholder="" required>
+                            <P>I ACCEPT THE PRIVACY STATEMENT</P>
+                    </div>
+                </div>
+                <button class="registor_btn">
+                    <span class="act" onclick="store()">Create Account</span>
+                </button>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

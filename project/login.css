@@ -1,0 +1,79 @@
+*{
+    background-color: white;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+#logo{
+    margin-top: -90px;
+    font-size: 50px;
+    margin-left:-200px;
+    font-family: "Neue-Helvetica";
+}
+.cart{
+    height: 50px;
+}
+#info{
+    display: flex;
+    gap: 10px;
+    margin-right: -300px;
+}
+input{
+ background-color: transparent;
+ border: none;
+ border-bottom: 1px solid #ccc;
+ color: #555;
+ width: 250px;
+ box-sizing: border-box; 
+ margin: 0px 0 0 -100px;
+ position: relative;
+ left: 50%;
+}
+#mid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: auto;
+}
+#login{
+    display: grid;
+    grid-template-rows: repeat(4,0.6fr);
+    text-align: left;
+    margin-left: 160px;
+    justify-content: flex-start;
+    font-size: 15px;
+}
+#login h1{
+    margin-left: 1px;
+    font-size: 20px;
+}
+#login p{
+    margin-left: 1px;
+    font-size: 15px;
+}
+#emailEL{
+    margin-left: -150px;
+}
+#passwordEL{
+    margin-left: -150px;
+}
+#registor{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    width: 500px;
+}
+#registor h1{
+    margin-left: 1px;
+    font-size: 20px;
+}
+#registor p{
+    font-size: 15px;
+}
+button{
+    width: 200px;
+    height: 25px;
+    background-color: black;
+    color: white;
+}

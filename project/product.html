@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+    <script src="Registor.js"></script>
+</head>
+<body>
+    <div id="maincontainer">
+    <div id="navbar">
+        <div id="logo">
+            <h1>ZARA</h1>
+        </div>
+        <div class="catogry">
+            <p id="women">WOMEN</p>
+            <p id="mens">MEN</p>
+            <p id="kids">KIDS</p>
+        </div>
+        <div id="info">
+            <p class="help">HELP</p>
+            <img class="cart" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Rzn0JKCjXMqZ7OwyeTMD8ApHEl0giqINHA&usqp=CAU" alt="">
+        </div>
+    </div>
+    <div id="searchbar">
+        <input type="text" id="search" placeholder="Search">
+        <span class="underline"></span>
+    </div>
+    <h1 id="alert"></h1>
+    <select id="filter">
+        <option value="">Filter By Category</option>
+        <option value="Shirts">cafe</option>
+        <option value="Mens">ethnic</option>
+      </select>
+    <div id="men">
+    </div>
+</div>
+</body>
+<script>
+  let container = document.getElementById("men");
+
+let filtersel = document.getElementById("filter");
+
+let fetchData = []
+
+filtersel.addEventListener("change",()=>{
+  let filtered = fetchData.filter((element) =>{
+
+    if(element.type === filtersel.value){
+      return true;
+    }else {
+      return false;
+    }
+  })
+  displayRestaurant(filtered);
+})
+
+const url = `https://639f5d985eb8889197fb3721.mockapi.io/Fashion`;
+console.log(url)
+// All your JS code for Home Page goes here
+fetch("https://639f5d985eb8889197fb3721.mockapi.io/Fashion")
+.then(responeObject => {
+  return responeObject.json();
+})
+.then((accutalData)=>{
+  fetchData = accutalData.data;
+  displayRestaurant(accutalData.data)
+  console.log(fetchData)
+  
+})
+.catch((error) => {
+  console.log(error)
+})
+
+function displayRestaurant(data){
+  container.innerHTML = null;
+
+   data = [];
+
+
+  data.forEach((element) =>{
+
+    let card = document.createElement("div");
+
+    let Shirts = document.createElement("img");
+    Shirts.setAttribute("src",element.Shirts);
+
+    let Name = document.createElement("h2")
+    Name.innerText = element.Name;
+
+    let Price = document.createElement("h4")
+    Price.innerText = "$"+element.Price;
+
+    let Category = document.createElement("p");
+    Category.innerText=element.type;
+
+    let Rating = document.createElement("p");
+    Rating.innerText = element.Rating;
+
+    let addtoFavourites = document.createElement("button");
+    addtoFavourites.innerText = "Favourites"
+
+    addtoFavourites.addEventListener("click",() =>{
+      let FavouritesData = JSON.parse(localStorage.getItem("Favourites"));
+
+      if(FavouritesData === null) FavouritesData=[]
+
+      let isAlreadyFavourites = false;
+      for(let i=0;i<FavouritesData.length;i++){
+        if(FavouritesData[i].id===element.id){
+          isAlreadyFavourites = true;
+          break;
+        };
+      }
+      if(isAlreadyFavourites === true){
+        alert("Restaurant is already added");
+      }else {
+        FavouritesData.push({...element,quantity:1});
+        localStorage.setItem("Favourites", JSON.stringify(FavouritesData));
+        alert("Restaurant is added to favourites");
+      }
+    })
+    card.append(Shirts,Name,Price,Rating,addtoFavourites);
+    container.append(card)
+  })
+}
+</script>
+</html>

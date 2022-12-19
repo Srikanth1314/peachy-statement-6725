@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#navbar{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    align-items: top;
+}
+#logo{
+    margin-top: 0px;
+    font-size: 50px;
+    margin-left:-200px;
+    font-family: "Neue-Helvetica";
+}
+.cart{
+    height: 50px;
+}
+#info{
+    display: flex;
+    gap: 10px;
+    margin-right: -300px;
+}
+#search{
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.fields{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    color: black;
+    margin-top: 50px;
+}
+.box{
+    display: grid;
+    grid-template-columns: repeat(50,1fr);
+    color: black;
+    margin-left: 25px;
+    margin-top: 15px;
+    gap: 5px;
+}
+.inut_field{
+   display: grid;
+   grid-template-rows: repeat(3,1fr);
+   padding: 5px;
+}
+.inut_field input{
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.details_personal{
+    padding: 100px;
+}
+.checkbox{
+    margin-left: 15px;
+}
+button{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.input_field{
+    margin-top: 10px;
+    display: flex;
+}
+button{
+    background-color: black;
+    color: white;
+    width: 500px;
+}

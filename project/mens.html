@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      /* All Your css for Home page goes here  */
+      #navbar{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+      }
+      #mens{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        box-shadow: 0px 0px 0px 0px;
+      }
+      img{
+        width: 100%;
+      }
+      #info img{
+        width: 10%;
+      }
+      #info{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+      }
+    </style>
+  </head>
+
+  <body>
+        <div id="navbar">
+            <div id="logo">
+                <h1><a href="Home.html">ZARA</a></h1>
+                
+            </div>
+            <div id="searchbar">
+                <input type="text" id="search" placeholder="Search">
+                <span class="underline"></span>
+            </div>
+            <div id="info">
+                <p class="help">HELP</p>
+                <a href="cart.html"> <img class="cart" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Rzn0JKCjXMqZ7OwyeTMD8ApHEl0giqINHA&usqp=CAU" alt=""></a>
+               
+            </div>
+
+     
+    </div>
+    <select id="filter">
+      <option value="">Filter By Category</option>
+      <option value="cafe">cafe</option>
+      <option value="ethnic">ethnic</option>
+      <option value="fast_food">fast_food</option>
+    </select>
+    <h1 id="alert"></h1>
+    <div id="mens">
+      <!-- Here Append All the Products  -->
+    </div>
+  </body>
+  <script>
+   
+  </script>
+</html>

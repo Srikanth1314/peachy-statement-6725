@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#container{
+    width: 1000px;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0px;
+    align-items: top;
+    background: transparent;
+}
+#search{
+    
+  color: black;
+  background-color: transparent;
+  font-size: 15px;
+  position: fixed;
+  border: none;
+  border-bottom: 1px solid black;
+  top: 7%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100px;
+  padding: 20px;
+  text-align: left;
+}
+#logo{
+    margin-top: 0px;
+    font-size: 50px;
+    margin-left:-200px;
+    font-family: "Neue-Helvetica";
+    background-color: transparent;
+    font-size: 50px;
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    font-weight: 100;
+    text-decoration: none;
+}
+#logo h1{
+    font-weight: 20;
+    letter-spacing: -20px;
+    color: black;
+}
+.catogry{
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    
+}
+.cart{
+    height: 50px;
+   
+}
+#info{
+    display: flex;
+    gap: 10px;
+    margin-right: -300px;
+    font-size: 50px;
+    position: fixed;
+    top: 10%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+}
+
+.scroll img{
+    height: 50%; 
+    width: 1450px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section{
+   font-weight: 100; 
+   display: grid;
+   grid-template-columns: repeat(5,1fr);
+   justify-content: space-evenly;
+   font-size: 10px;
+   gap: 50px;
+   margin-left: 500px;
+   margin-bottom: 50px;
+}
+#foot{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 0px;
+    font-size: 50px;
+    margin-left:-200px;
+    font-family: "Neue-Helvetica";
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 50px;
+    position: fixed;
+    top: 100%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 300px;
+    padding: 20px;
+    text-align: center;   
+}
+
+.log button{
+    margin-top: 0px;
+    font-size: 20px;
+    margin-left:-200px;
+    font-family: "Neue-Helvetica";
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    top: 10%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100px;
+    padding: 20px;
+    text-align: left;
+    font-weight: 100;
+}
+
+@media (orientation: landscape) {
+    body {
+      flex-direction: row;
+    }
+  }
+  
+  @media (orientation: portrait) {
+    body {
+      flex-direction: column;
+    }
+  }
+
+.women{
+  margin-top: 100px;
+  font-size: 20px;
+  margin-left:-200px;
+  font-family: "Neue-Helvetica";
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100px;
+  padding: 20px;
+  text-align: left;
+  font-weight: 500;
+
+}
+
+.women button{
+  border: none;
+  background-color: transparent;
+}
+.mens{
+  margin-top: 100px;
+    font-size: 20px;
+    margin-left:-100px;
+    font-family: "Neue-Helvetica";
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100px;
+    padding: 20px;
+    text-align: left;
+    font-weight: 100;
+}
+.mens button{
+  border: none;
+  background-color: transparent;
+}
+.kids{
+  margin-top: 100px;
+    font-size: 20px;
+    margin-left:350px;
+    font-family: "Neue-Helvetica";
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100px;
+    padding: 20px;
+    text-align: left;
+    font-weight: 100;
+}
+.kids button{
+  border: none;
+  background-color: transparent;
+}
+.help{
+  color: black;
+}
